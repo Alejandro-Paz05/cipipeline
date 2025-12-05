@@ -1,0 +1,22 @@
+{
+  "name": "cipipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "start": "node index.js",
+  "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "chai": "^6.2.1",
+    "chai-http": "^5.1.2",
+    "mocha": "^11.7.5"
+  }
+}
