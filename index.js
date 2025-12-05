@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -11,10 +11,10 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   app.listen(PORT, () => {
     console.log(`Servidor corriendo en puerto ${PORT}`);
   });
 }
 
-module.exports = app;
+export default app;

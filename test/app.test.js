@@ -1,13 +1,13 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const app = require('../index');
-const expect = chai.expect;
+import * as chai from 'chai';
+import chaiHttp from 'chai-http';
+import app from '../index.js';
 
-chai.use(chaiHttp);
+const expect = chai.expect;
+chai.default.use(chaiHttp);
 
 describe('API tests', () => {
   it('GET /health responde con status ok', (done) => {
-    chai.request(app)
+    chai.default.request(app)
       .get('/health')
       .end((err, res) => {
         expect(res).to.have.status(200);

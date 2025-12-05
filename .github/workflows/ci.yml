@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Test on ${{ matrix.os }} with Node.js ${{ matrix.node-version }}
+    name: Test on ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
@@ -73,5 +73,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: production-build
-          path: dist/ # Cambia a build/ si tu proyecto usa esa carpeta
+          path: dist/ # o build/ según tu setup
           retention-days: 7
